@@ -1,0 +1,67 @@
+news:
+  - title: "In January 2021, I left Stanford to pursue new opportunities"
+    date: "01/2021"
+
+  - title: "Started my own consultancy: <a href='https://www.wrightai.com'>Wright AI Ltd</a></b>"
+    date: "11/2020"
+
+  - title: "<a href='https://gitlab.com/LMSAL_HUB/aia_hub/aiapy'>aiapy</a> is now citeable! <b>available at <a href='https://zenodo.org/record/4016983#.X1gmHGdKhMN'>Zenodo</a></b>"
+    date: "09/2020"
+
+  - title: "Attended the Helio Hackweek 2020; worked on <a href='https://gitlab.com/LMSAL_HUB/aia_hub/aiapy'>aiapy</a>"
+    date: "08/2020"
+
+  - title: "Google Cloud released two videos of NASA FDL 2019 work! <b>available <a href='https://www.youtube.com/watch?v=RtAtsEyAWA4'>here</a> and <a href='https://www.youtube.com/watch?v=CMDRHTiJKUA'>here</a></b>"
+    date: "07/2020"
+
+  - title: "Attended <a href='https://www.scipy2020.scipy.org/'>SciPy 2020</a>"
+    date: "07/2020"
+
+  - title: "Accepted to participate in <a href='https://heliohackweek.github.io/'>Helio Hackweek 2020</a> (August 20th - 27th)"
+    date: "05/2020"
+
+  - title: "Attended the <a href='http://openastronomy.org/pyastro/2020/'>PyAstro 2020</a> Hack Day and worked on sunkit-dem: <a href='https://github.com/sunpy/sunkit-dem/tree/master/sunkit_dem'>see github repo</a>!"
+    date: "04/2020"
+
+  - title: "Joined <a href='http://www.orionailabs.com/team-moonraider'>Orion (AI) Labs</a>"
+    date: "01/2020"
+
+  - title: "Attended NeurIPS 2019"
+    date: "12/2019"
+
+  - title: "Presented at AGU Fall Meeting 2019"
+    date: "12/2019"
+
+  - title: "FDL Results Featured by NASA: <b><a href='https://www.nasa.gov/feature/goddard/2019/nasa-takes-a-cue-from-silicon-valley-to-hatch-artificial-intelligence-technologies'>available here</a></b>"
+    date: "11/2019"
+
+  - title: "Two Deep Learning Papers Accepted to Workshops at NeurIPS 2019 (Vancouver, Canada)"
+    date: "11/2019"
+
+  - title: "Intel AI blog post of our FDL 2019 challenge: <b><a href='https://www.intel.ai/intel-ai-nasa-fdl-for-solar-magnetic-field-data/?spredfast-trk-id=sf222180011&mc_cid=2cd1da8385&mc_eid=a4b97384e8#gs.blznk9'>available here</a></b>"
+    date: "10/2019"
+
+  - title: "New Deep Learning Paper Published by Science Advances: <b><a href='/projects/2019_ScienceAdvances'>see the press coverage here</a></b>"
+    date: "10/2019"
+
+  - title: "Presented at the 1st Machine Learning in Heliophysics (<a href='https://ml-helio.github.io/'>ML-Helio</a>) Conference"
+    date: "09/2019"
+
+  - title: "<a href='https://frontierdevelopmentlab.org/2019-superresolution'>Super-resolution Magnetogram</a> team win the Collaborative Spirit award at NASA FDL"
+    date: "08/2019"
+
+  - title: "FDL 2019 kicked off:"
+    subtitle: "An 8-week applied AI accelerator hosted at SETI in Mountain View, CA"
+    date: "06/2019"
+
+  - title: "Machine Learning dataset prepared from the SDO Mission <b><a href='/projects/2019_MLDataset'>available here</a></b>"
+    date: "04/2019"
+    url: "/projects/2019_MLDataset"
+
+  # - title: "New Website"
+  #  #subtitle: ""
+  #  date: "04/2019"
+
+  - title: "Awarded PhD; Thesis title:"
+    subtitle: "<a href='http://theses.gla.ac.uk/41187/'>Energetics of small solar flares and brightenings</a>"
+    date: "04/2019"
