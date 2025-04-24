@@ -23,14 +23,14 @@ papers:
 
   - title: "Graph Contrastive Learning with Adaptive Proximity-based Graph Augmentation"
     authors: "<b>Wei Zhuo</b>, Guang Tan"
-    venue: "IEEE Transactions on Neural Networks and Learning Systems."
+    venue: "<b>IEEE TNNLS</b>: IEEE Transactions on Neural Networks and Learning Systems."
     paper_pdf: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10143747"
     code: "https://github.com/JhuoW/PE-GCL"
     selected: y
 
   - title: "DiffusionGAN: Network Embedding for Information Diffusion Prediction with Generative Adversarial Nets"
     authors: "<b>Wei Zhuo</b>, Qianyi Zhan, Yanan Zhao, Yuan Liu"
-    venue: "IEEE International Symposium on Parallel and Distributed Processing with Applications (ISPA)."
+    venue: "<b>ISPA</b>: IEEE International Symposium on Parallel and Distributed Processing with Applications."
     paper_pdf: "https://ieeexplore.ieee.org/abstract/document/9047288"
     code: "https://github.com/JhuoW/DiffusionGAN"
     selected: y
@@ -44,7 +44,7 @@ papers:
 
   - title: "Enhancing Vision and Language Navigation with Prompt-based Scene Knowledge"
     authors: "Zhaohuan Zhan, Jinghui Qin, <b>Wei Zhuo</b>, Guang Tan"
-    venue: "IEEE Transactions on Circuits and Systems for Video Technology"
+    venue: "<b>IEEE TCSVT</b>: IEEE Transactions on Circuits and Systems for Video Technology."
     paper_pdf: "https://ieeexplore.ieee.org/document/10531078"
     selected: y    
 
@@ -59,6 +59,14 @@ papers:
     authors: "Qianyi Zhan, <b>Wei Zhuo</b>, Wei Hu, Sherry Emery, Chongjun Wang, Yuan Liu, Xiaofeng Wang "
     venue: "Journal of Medical Imaging and Health Informatics."
     paper_pdf: "https://www.researchgate.net/publication/335532634_Opinion_Mining_in_Online_Social_Media_for_Public_Health_Campaigns"
+    #code: "https://github.com/msaveski/twitter_perspective_taking"
+    #data: "https://github.com/msaveski/twitter_perspective_taking"
+    selected: y
+
+  - title: "Viral Marketing for Public Health Campaigns in Social Networks"
+    authors: "Xiaofeng Wang, <b>Wei Zhuo</b>, Qianyi Zhan, Yuan Liu "
+    venue: "Journal of Medical Imaging and Health Informatics."
+    paper_pdf: "https://www.ingentaconnect.com/contentone/asp/jmihi/2021/00000011/00000002/art00003"
     #code: "https://github.com/msaveski/twitter_perspective_taking"
     #data: "https://github.com/msaveski/twitter_perspective_taking"
     selected: y
