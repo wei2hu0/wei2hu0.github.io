@@ -1,0 +1,76 @@
+services:
+
+  - title: <a href="https://nips.cc/Conferences/2024/ProgramCommittee#all-reviewers" target="_blank">NeurIPS</a> (2024, 2025)
+    # venue: "KDD 2024"
+    # role: "Workshop Co-chair"
+    conference: y 
+
+  - title: <a href="https://iclr.cc/Conferences/2025/Reviewers" target="_blank">ICLR</a> (2025)
+    # role: "Program Co-chair"
+    conference: y 
+
+  - title: ICML (2025)
+    #role: "Workshop Co-chair"
+    conference: y 
+
+  - title: AISTATS (2025)
+    #role: "Industry and Innovation Track Co-chair"
+    conference: y 
+
+  - title: KDD (2024, 2025)
+    #role: "Industry and Innovation Track Co-chair"
+    conference: y 
+
+  - title: IJCAI (2023, 2024, 2025)
+    #role: "WSDM Cup Co-chair"
+    conference: y 
+
+  - title: FM-TheWebConf Workshop (2025)
+    # role: "Workshop Co-chair"
+    conference: y 
+
+
+  - title: "<b>TKDD</b>: ACM Transactions on Knowledge Discovery from Data"
+    # venue: "KDD 2020"
+    #role: "Co-organizer (main contact)"
+    journal: y 
+
+  - title: "<b>JBHI</b>: IEEE Journal of Biomedical and Health Informatics"
+    # venue: "KDD 2020"
+    #role: "Co-organizer (main contact)"
+    journal: y 
+
+  - title: "<b>TNNLS</b>: IEEE Transactions on Neural Networks and Learning Systems"
+    # venue: "KDD 2020"
+    #role: "Co-organizer (main contact)"
+    journal: y 
+    
+  - title: "<b>TCSVT</b>: IEEE Transcations on Circuits and Systems for Video Technology"
+    # venue: "KDD 2020"
+    #role: "Co-organizer (main contact)"
+    journal: y 
+    
+  - title: "IEEE Access"
+    # venue: "KDD 2020"
+    #role: "Co-organizer (main contact)"
+    journal: y 
+
+  - title: "Computers and Electrical Engineering"
+    # venue: "KDD 2020"
+    #role: "Co-organizer (main contact)"
+    journal: y 
+    
+  - title: "<b>ESWA</b>: Expert Systems With Applications"
+    # venue: "KDD 2020"
+    #role: "Co-organizer (main contact)"
+    journal: y 
+    
+  - title: "Neurocomputing"
+    # venue: "KDD 2020"
+    #role: "Co-organizer (main contact)"
+    journal: y 
+
+  - title: "<b>NN</b>: Neural Networks"
+    # venue: "KDD 2020"
+    #role: "Co-organizer (main contact)"
+    journal: y 
