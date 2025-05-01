@@ -1,5 +1,12 @@
 papers:
 
+  - title: "Commute Graph Neural Networks"
+    authors: "<b>Wei Zhuo</b>, Han Yu, Guang Tan, Xiaoxiao Li"
+    venue: "<b>ICML</b> 2025: International Conference on Machine Learning. 2025."
+    paper_pdf: "https://arxiv.org/abs/2407.01635"
+    # code: "https://github.com/msaveski/counterfactual-peer-review"
+    selected: y
+
   - title: "Partitioning Message Passing for Graph Fraud Detection"
     authors: "<b>Wei Zhuo</b>, Zemin Liu, Bryan Hooi, Bingsheng He, Guang Tan, Rizal Fathony, Jia Chen"
     venue: "<b>ICLR</b> 2024: International Conference on Learning Representations. 2024."
@@ -33,13 +40,6 @@ papers:
     venue: "<b>ISPA</b>: IEEE International Symposium on Parallel and Distributed Processing with Applications."
     paper_pdf: "https://ieeexplore.ieee.org/abstract/document/9047288"
     code: "https://github.com/JhuoW/DiffusionGAN"
-    selected: y
-
-  - title: "Commute Graph Neural Networks"
-    authors: "<b>Wei Zhuo</b>, Guang Tan"
-    venue: "Arxiv: arXiv preprint 2407.01635."
-    paper_pdf: "https://arxiv.org/abs/2407.01635"
-    # code: "https://github.com/msaveski/counterfactual-peer-review"
     selected: y
 
   - title: "Enhancing Vision and Language Navigation with Prompt-based Scene Knowledge"
