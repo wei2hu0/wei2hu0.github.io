@@ -5,6 +5,7 @@ papers:
     venue: "<b>ICML</b> 2025: International Conference on Machine Learning. 2025."
     paper_pdf: "https://arxiv.org/abs/2407.01635"
     # code: "https://github.com/msaveski/counterfactual-peer-review"
+    code: "https://arxiv.org/abs/2407.01635"
     selected: y
 
   - title: "Partitioning Message Passing for Graph Fraud Detection"
