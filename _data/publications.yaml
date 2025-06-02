@@ -46,8 +46,9 @@ papers:
   - title: "Personalized Subgraph Federated Learning with Differentiable Auxiliary Projections"
     authors: "<b>Wei Zhuo</b>, Zhaohuan Zhan, Ziduo Yang, Han Yu"
     venue: "Arxiv'25: arXiv preprint. 2025. "
-    underreview: "https://arxiv.org/"
+    # underreview: "https://arxiv.org/"
     # code: "https://github.com/JhuoW/DiffusionGAN"
+    paper_pdf: "https://arxiv.org/abs/2505.23864"
     selected: y
 
 
