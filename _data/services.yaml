@@ -17,6 +17,11 @@ services:
     #role: "Industry and Innovation Track Co-chair"
     conference: y 
 
+  - title: CIKM (2025)
+    role: "Senior PC member (SPC)"
+    conference: y 
+
+
   - title: KDD (2024, 2025)
     #role: "Industry and Innovation Track Co-chair"
     conference: y 
