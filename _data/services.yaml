@@ -22,11 +22,7 @@ services:
     conference: y 
 
 
-  - title: KDD (2024, 2025)
-    #role: "Industry and Innovation Track Co-chair"
-    conference: y 
-
-  - title: IJCAI (2023, 2024, 2025)
+  - title: AAAI (2026)
     #role: "WSDM Cup Co-chair"
     conference: y 
 
