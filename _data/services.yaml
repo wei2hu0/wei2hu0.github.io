@@ -13,7 +13,7 @@ services:
     #role: "Workshop Co-chair"
     conference: y 
 
-  - title: AISTATS (2025)
+  - title: AISTATS (2025, 2026)
     #role: "Industry and Innovation Track Co-chair"
     conference: y 
 
