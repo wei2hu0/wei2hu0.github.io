@@ -1,5 +1,13 @@
 papers:
 
+  - title: "Personalized Subgraph Federated Learning with Differentiable Auxiliary Projections"
+    authors: "<b>Wei Zhuo</b>, Zhaohuan Zhan, Ziduo Yang, Han Yu"
+    venue: "<b>NeurIPS</b> 2022: Advances in Neural Information Processing Systems. 2022."
+    # underreview: "https://arxiv.org/"
+    # code: "https://github.com/JhuoW/DiffusionGAN"
+    paper_pdf: "https://arxiv.org/abs/2505.23864"
+    selected: y
+
   - title: "Commute Graph Neural Networks"
     authors: "<b>Wei Zhuo</b>, Han Yu, Guang Tan, Xiaoxiao Li"
     venue: "<b>ICML</b> 2025: International Conference on Machine Learning. 2025."
@@ -41,14 +49,6 @@ papers:
     venue: "<b>ISPA</b>: IEEE International Symposium on Parallel and Distributed Processing with Applications."
     paper_pdf: "https://ieeexplore.ieee.org/abstract/document/9047288"
     code: "https://github.com/JhuoW/DiffusionGAN"
-    selected: y
-    
-  - title: "Personalized Subgraph Federated Learning with Differentiable Auxiliary Projections"
-    authors: "<b>Wei Zhuo</b>, Zhaohuan Zhan, Ziduo Yang, Han Yu"
-    venue: "Arxiv'25: arXiv preprint. 2025. "
-    # underreview: "https://arxiv.org/"
-    # code: "https://github.com/JhuoW/DiffusionGAN"
-    paper_pdf: "https://arxiv.org/abs/2505.23864"
     selected: y
 
 
