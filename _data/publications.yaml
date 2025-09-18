@@ -2,7 +2,7 @@ papers:
 
   - title: "Personalized Subgraph Federated Learning with Differentiable Auxiliary Projections"
     authors: "<b>Wei Zhuo</b>, Zhaohuan Zhan, Ziduo Yang, Han Yu"
-    venue: "<b>NeurIPS</b> 2022: Advances in Neural Information Processing Systems. 2022."
+    venue: "<b>NeurIPS</b> 2025: Advances in Neural Information Processing Systems. 2025."
     # underreview: "https://arxiv.org/"
     # code: "https://github.com/JhuoW/DiffusionGAN"
     paper_pdf: "https://arxiv.org/abs/2505.23864"
