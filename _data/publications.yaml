@@ -1,11 +1,11 @@
 papers:
 
   - title: "Personalized Subgraph Federated Learning with Differentiable Auxiliary Projections"
-    authors: "<b>Wei Zhuo</b>, Zhaohuan Zhan, Ziduo Yang, Han Yu"
+    authors: "<b>Wei Zhuo</b>, Zhaohuan Zhan, Han Yu"
     venue: "<b>NeurIPS</b> 2025: Advances in Neural Information Processing Systems. 2025."
     # underreview: "https://arxiv.org/"
-    # code: "https://github.com/JhuoW/DiffusionGAN"
     paper_pdf: "https://arxiv.org/abs/2505.23864"
+    code: "https://github.com/JhuoW/FedAux"
     selected: y
 
   - title: "Commute Graph Neural Networks"
