@@ -1,15 +1,15 @@
 services:
 
-  - title: NeurIPS (<a href="https://nips.cc/Conferences/2024/ProgramCommittee#all-reviewers" target="_blank">2024</a>, 2025)
+  - title: NeurIPS (<a href="https://nips.cc/Conferences/2024/ProgramCommittee#all-reviewers" target="_blank">2024</a>, <a href="https://nips.cc/Conferences/2025/ProgramCommittee#all-reviewers" target="_blank">2025</a>)
     # venue: "KDD 2024"
     # role: "Workshop Co-chair"
     conference: y 
 
-  - title: ICLR (<a href="https://iclr.cc/Conferences/2025/Reviewers" target="_blank">2025</a>)
+  - title: ICLR (<a href="https://iclr.cc/Conferences/2025/Reviewers" target="_blank">2025</a>, 2026)
     # role: "Program Co-chair"
     conference: y 
 
-  - title: ICML (<a href="https://icml.cc/Conferences/2025/Reviewers" target="_blank">2025</a>)
+  - title: ICML (<a href="https://icml.cc/Conferences/2025/ProgramCommittee" target="_blank">2025</a>)
     #role: "Workshop Co-chair"
     conference: y 
 
