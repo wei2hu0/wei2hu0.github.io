@@ -51,6 +51,12 @@ papers:
     code: "https://github.com/JhuoW/DiffusionGAN"
     selected: y
 
+  - title: "Equivariant Atomic and Lattice Modeling Using Geometric Deep Learning for Crystal Structure Optimization"
+    authors: "Ziduo Yang, Yiming Zhao, Xian Wang, <b>Wei Zhuo</b>, Xiaoqing Liu, Lei Shen"
+    venue: "<b>AAAI</b> 2026: AAAI Conference on Artificial Intelligence."
+    paper_pdf: "https://openreview.net/pdf?id=Sr91NqsCwi"
+    selected: y
+
 
   - title: "Enhancing Vision and Language Navigation with Prompt-based Scene Knowledge"
     authors: "Zhaohuan Zhan, Jinghui Qin, <b>Wei Zhuo</b>, Guang Tan"
