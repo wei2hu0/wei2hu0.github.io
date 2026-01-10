@@ -9,7 +9,7 @@ services:
     # role: "Program Co-chair"
     conference: y 
 
-  - title: ICML (<a href="https://icml.cc/Conferences/2025/ProgramCommittee" target="_blank">2025</a>)
+  - title: ICML (<a href="https://icml.cc/Conferences/2025/ProgramCommittee" target="_blank">2025</a>, 2026)
     #role: "Workshop Co-chair"
     conference: y 
 
