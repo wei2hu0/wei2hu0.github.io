@@ -1,0 +1,39 @@
+---
+layout: projects
+title: Projects
+---
+
+
+<!-- ========== PROJECTS ========== -->
+<div class="docs-section" id="projects">
+  <h4>Projects</h4>
+    <div class="tab-pane">
+      {% for project in site.data.projects.projects %}
+        {% assign index_modulo = forloop.index0 | modulo:2 %}
+        {% if index_modulo == 0 %}
+          <div class="row">
+        {% endif %}
+
+          <div class="twelve columns">
+            <div class="project-container">
+
+                <div class="project-image-container">
+                  <a href="{{ project.url }}" target="_blank">
+                    <img src="{{ project.thumbnail }}" class="u-max-full-width" style="border: 1px solid #e1e1e1; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 4px;"/>
+                  </a>
+                </div>
+
+                <div class="project-caption">
+                   <h5>{{ project.title }}</h5>
+                   <p>{{ project.subtitle }}</p>
+                </div>
+
+            </div>
+          </div>
+
+        {% if index_modulo == 1 %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+</div>

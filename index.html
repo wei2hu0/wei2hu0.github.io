@@ -30,7 +30,42 @@ title: Home
 </p>
 </div>
 
+<!--
+<p>
+I developed PDF-Editor, a free, lightweight, offline, and open-source PDF file editor: 
+</p>
+{% for project in site.data.projects.projects %}
 
+  <div class="project-image-container">
+    <a href="{{ project.url }}" target="_blank">
+      
+      <img src="{{ project.thumbnail }}" class="u-max-full-width"/>
+      
+    </a>
+  </div>
+
+{% endfor %}
+-->
+
+<p>
+I developed <strong>PDF-Editor</strong>, a free, lightweight, offline, and open-source PDF file editor. Try it:
+</p>
+
+{% for project in site.data.projects.projects %}
+
+  <div class="project-image-container" style="max-width: 300px; margin: 0 auto;">
+    <a href="{{ project.url }}" target="_blank">
+      
+      <img 
+        src="{{ project.thumbnail }}" 
+        class="u-max-full-width" 
+        style="border: 1px solid #e1e1e1; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 4px;"
+      />
+      
+    </a>
+  </div>
+
+{% endfor %}
 
 <!--
 <div class="docs-section" id="prospective-students">  
