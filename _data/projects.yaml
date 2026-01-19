@@ -5,6 +5,12 @@ projects:
     url: "https://github.com/JhuoW/PDF-Editor"
     selected: y
 
+  - title: "Scholar Disambiguator"
+    subtitle: "Bring DBLP-style author disambiguation to Google Scholar. 🎓 Automatically lists same-name researchers + affiliations in the sidebar to fix profile confusion. "
+    thumbnail: "assets/projects/scholar-disambiguator.png"
+    url: "https://github.com/JhuoW/Google-Scholar-Author-Disambiguator"
+    selected: n
+
 #  - title: "Human Atlas"
 #    subtitle: "Tool for Mapping Social Networks"
 #    thumbnail: "assets/projects/2016_human-atlas/thumbnail.png"
