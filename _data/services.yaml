@@ -25,8 +25,11 @@ services:
     role: "Senior PC member (SPC)"
     conference: y 
 
-
   - title: AAAI (2026)
+    #role: "WSDM Cup Co-chair"
+    conference: y 
+
+  - title: ACL (2026)
     #role: "WSDM Cup Co-chair"
     conference: y 
 

@@ -1,5 +1,14 @@
 papers:
 
+  - title: "Modality-free Graph In-context Alignment"
+    authors: "<b>Wei Zhuo</b>, Siqiang Luo"
+    venue: "<b>ICLR</b> 2026: International Conference on Learning Representations. 2026."
+    # underreview: "https://arxiv.org/"
+    paper_pdf: "https://openreview.net/pdf?id=cDc95lucVL"
+    code: "https://github.com/JhuoW/MF-GIA"
+    selected: y
+
+
   - title: "Personalized Subgraph Federated Learning with Differentiable Auxiliary Projections"
     authors: "<b>Wei Zhuo</b>, Zhaohuan Zhan, Han Yu"
     venue: "<b>NeurIPS</b> 2025: Advances in Neural Information Processing Systems. 2025."
@@ -50,6 +59,15 @@ papers:
     paper_pdf: "https://ieeexplore.ieee.org/abstract/document/9047288"
     code: "https://github.com/JhuoW/DiffusionGAN"
     selected: y
+
+  - title: "CLAUSE: Agentic Neuro-Symbolic Knowledge Graph Reasoning via Dynamic Learnable Context Engineering"
+    authors: "Yang Zhao, Chengxiao Dai, <b>Wei Zhuo</b> Yue Xiu, Dusit Niyato"
+    venue: "<b>ICLR</b> 2026: International Conference on Learning Representations. 2026."
+    # underreview: "https://arxiv.org/"
+    paper_pdf: "https://openreview.net/pdf?id=97Qk741ih6"
+    code: ""
+    selected: y
+
 
   - title: "Equivariant Atomic and Lattice Modeling Using Geometric Deep Learning for Crystal Structure Optimization"
     authors: "Ziduo Yang, Yiming Zhao, Xian Wang, <b>Wei Zhuo</b>, Xiaoqing Liu, Lei Shen"
