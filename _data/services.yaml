@@ -5,7 +5,7 @@ services:
     # role: "Workshop Co-chair"
     conference: y 
 
-  - title: ICLR (<a href="https://iclr.cc/Conferences/2025/Reviewers" target="_blank">2025</a>, 2026)
+  - title: ICLR (<a href="https://iclr.cc/Conferences/2025/Reviewers" target="_blank">2025</a>, <a href="https://iclr.cc/Conferences/2026/Reviewers" target="_blank">2026</a>)
     # role: "Program Co-chair"
     conference: y 
 
@@ -33,7 +33,7 @@ services:
     #role: "WSDM Cup Co-chair"
     conference: y 
 
-  - title: FM-TheWebConf Workshop (2025, 2026)
+  - title: FM-TheWebConf Workshop (2025)
     # role: "Workshop Co-chair"
     conference: y 
 
