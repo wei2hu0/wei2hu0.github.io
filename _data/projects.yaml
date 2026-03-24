@@ -2,12 +2,23 @@ projects:
   - title: "PDF-Editor"
     subtitle: "A Free, Lightweight, Offline, and Open-Source PDF Editor | 免费，轻量化，开源的PDF编辑器 "
     thumbnail: "assets/projects/pdf-editor.png"
+    hompagethumbnail: "assets/projects/pdf-editor.png"
+    shortdescribe: "I developed <strong>PDF-Editor</strong>, a free, lightweight, offline, and open-source PDF file editor. Try it:"
     url: "https://github.com/JhuoW/PDF-Editor"
+    selected: y
+
+  - title: "OpenMathpix"
+    subtitle: " An open-source alternative to Mathpix Snip Tool. Instantly extract LaTeX, math equations, and text from images and screenshots. | OpenMathpix 是一款能将数学公式截图快速、准确转化为 LaTeX代码的开源工具。"
+    thumbnail: "assets/projects/OpenMathpix.png"
+    hompagethumbnail: "assets/projects/OpenMathpix-homepage.png"
+    shortdescribe: "I developed <strong>OpenMathpix</strong>, an open-source desktop snipping tool that captures screen regions and converts math formulas, tables, text into LaTeX, Markdown, or plain text. Try it:"
+    url: "https://github.com/JhuoW/OpenMathpix"
     selected: y
 
   - title: "Scholar Disambiguator"
     subtitle: "Bring DBLP-style author disambiguation to Google Scholar. 🎓 Automatically lists same-name researchers + affiliations in the sidebar to fix profile confusion. "
     thumbnail: "assets/projects/scholar-disambiguator.png"
+    hompagethumbnail: "assets/projects/scholar-disambiguator.png"
     url: "https://github.com/JhuoW/Google-Scholar-Author-Disambiguator"
     selected: n
 
