@@ -70,27 +70,6 @@ I developed <strong>PDF-Editor</strong>, a free, lightweight, offline, and open-
 {% endfor %}
 -->
 
-<h4><b>Projects</b></h4>
-{% for project in site.data.projects.projects %}
-	{% if project.selected == 'y' %}
-		<div class="project-container" style="margin-bottom: 2rem;">
-			
-			<p>{{ project.shortdescribe }}</p>
-			
-			<div class="project-image-container" style="max-width: 300px; margin: 0 auto;">
-				<a href="{{ project.url }}" target="_blank">
-				  <img 
-					src="{{ project.hompagethumbnail }}" 
-					class="u-max-full-width" 
-					style="border: 1px solid #e1e1e1; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 4px;"
-				  />
-				</a>
-			</div>
-
-		</div>
-	{% endif %}
-{% endfor %}
-
 <!--
 <div class="docs-section" id="prospective-students">  
   <h4>Prospective Students</h4>
@@ -132,7 +111,7 @@ I developed <strong>PDF-Editor</strong>, a free, lightweight, offline, and open-
 
 <!-- ========== PUBLICATIONS ========== -->
 <div class="docs-section" id="publications">
-  <h4><b>Selected Publications</b></h4>
+  <h4><b>Publications</b></h4>
 
   <p>Most recent publications on <a href="{{ site.data.main_info.google_scholar }}" target="_blank">Google Scholar</a>.<br/>
   <sup>&#x2606;</sup> indicates equal contribution and <sup>#</sup> indicates corresponding author.
@@ -366,6 +345,30 @@ I developed <strong>PDF-Editor</strong>, a free, lightweight, offline, and open-
 
   </ul>
 </div>-->
+
+<!-- ========== Tools ========== -->
+<div class="docs-section" id="tools">
+<h4><b>Tools</b></h4>
+	{% for project in site.data.projects.projects %}
+		{% if project.selected == 'y' %}
+			<div class="project-container" style="margin-bottom: 2rem;">
+				
+				<p>{{ project.shortdescribe }}</p>
+				
+				<div class="project-image-container" style="max-width: 300px; margin: 0 auto;">
+					<a href="{{ project.url }}" target="_blank">
+					  <img 
+						src="{{ project.hompagethumbnail }}" 
+						class="u-max-full-width" 
+						style="border: 1px solid #e1e1e1; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 4px;"
+					  />
+					</a>
+				</div>
+
+			</div>
+		{% endif %}
+	{% endfor %}
+</div>
 
 <!-- ========== Services ========== -->
 <div class="docs-section" id="services">
