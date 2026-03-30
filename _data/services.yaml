@@ -1,6 +1,6 @@
 services:
 
-  - title: NeurIPS (<a href="https://nips.cc/Conferences/2024/ProgramCommittee#all-reviewers" target="_blank">2024</a>, <a href="https://nips.cc/Conferences/2025/ProgramCommittee#all-reviewers" target="_blank">2025</a>)
+  - title: NeurIPS (<a href="https://nips.cc/Conferences/2024/ProgramCommittee#all-reviewers" target="_blank">2024</a>, <a href="https://nips.cc/Conferences/2025/ProgramCommittee#all-reviewers" target="_blank">2025</a>, 2026)
     # venue: "KDD 2024"
     # role: "Workshop Co-chair"
     conference: y 
@@ -21,7 +21,7 @@ services:
     #role: "Industry and Innovation Track Co-chair"
     conference: y 
 
-  - title: CIKM (2025)
+  - title: CIKM (2025, 2026)
     role: "Senior PC member (SPC)"
     conference: y 
 
