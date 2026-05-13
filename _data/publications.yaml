@@ -59,6 +59,14 @@ papers:
     paper_pdf: "https://ieeexplore.ieee.org/abstract/document/9047288"
     code: "https://github.com/JhuoW/DiffusionGAN"
     selected: y
+    
+  - title: "Federated Data and Feature Selection by Generalized CUR Decomposition"
+    authors: "Ying-Peng Tang, Zhuang Qi, Xiaoli Tang, <b>Wei Zhuo</b>, Sheng-Jun Huang, Han Yu"
+    venue: "<b>ICML</b> 2026: International Conference on Machine Learning. 2026."
+    # underreview: "https://arxiv.org/"
+    paper_pdf: "https://openreview.net/pdf?id=qLfDHsMojZ"
+    code: ""
+    selected: y  
 
   - title: "CLAUSE: Agentic Neuro-Symbolic Knowledge Graph Reasoning via Dynamic Learnable Context Engineering"
     authors: "Yang Zhao, Chengxiao Dai, <b>Wei Zhuo</b> Yue Xiu, Dusit Niyato"
