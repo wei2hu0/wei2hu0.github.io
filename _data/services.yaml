@@ -10,7 +10,7 @@ services:
     conference: y 
 
   - title: ICML (<a href="https://icml.cc/Conferences/2025/ProgramCommittee" target="_blank">2025</a>, 2026)
-    #role: "Workshop Co-chair"
+    role: "ICML 2026 Gold Reviewer Award"
     conference: y 
 
   - title: CVPR (2026)
@@ -45,6 +45,11 @@ services:
     journal: y 
 
   - title: "<b>TNNLS</b>: IEEE Transactions on Neural Networks and Learning Systems"
+    # venue: "KDD 2020"
+    #role: "Co-organizer (main contact)"
+    journal: y 
+
+  - title: "<b>TMLR</b>: Transactions on Machine Learning Research"
     # venue: "KDD 2020"
     #role: "Co-organizer (main contact)"
     journal: y 
