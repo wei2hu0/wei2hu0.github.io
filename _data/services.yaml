@@ -6,7 +6,7 @@ services:
     conference: y 
 
   - title: ICLR (<a href="https://iclr.cc/Conferences/2025/Reviewers" target="_blank">2025</a>, <a href="https://iclr.cc/Conferences/2026/Reviewers" target="_blank">2026</a>)
-    # role: "Program Co-chair"
+    role: "ICLR 2027 Area Chair"
     conference: y 
 
   - title: ICML (<a href="https://icml.cc/Conferences/2025/ProgramCommittee" target="_blank">2025</a>, 2026)
