@@ -1,4 +1,12 @@
 papers:
+  - title: "Large Language Models as Graph Computational Solvers via Topology-aware Residual Attention"
+    authors: "<b>Wei Zhuo</b>, Siqiang Luo"
+    venue: "<b>NeurIPS</b> 2026: Advances in Neural Information Processing Systems. 2026."
+    # underreview: "https://arxiv.org/"
+    paper_pdf: "https://openreview.net/pdf?id=cDc95lucVL"
+    code: "https://github.com/JhuoW/MF-GIA"
+    selected: y
+
 
   - title: "Modality-free Graph In-context Alignment"
     authors: "<b>Wei Zhuo</b>, Siqiang Luo"
