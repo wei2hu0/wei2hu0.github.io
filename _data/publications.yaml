@@ -3,8 +3,8 @@ papers:
     authors: "<b>Wei Zhuo</b>, Siqiang Luo"
     venue: "<b>NeurIPS</b> 2026: Advances in Neural Information Processing Systems. 2026."
     # underreview: "https://arxiv.org/"
-    paper_pdf: "https://openreview.net/pdf?id=cDc95lucVL"
-    code: "https://github.com/JhuoW/MF-GIA"
+    paper_pdf: "https://openreview.net/pdf?id=t1V4p1bOen"
+    code: "https://github.com/JhuoW/TRACER"
     selected: y
 
 
@@ -12,7 +12,7 @@ papers:
     authors: "<b>Wei Zhuo</b>, Siqiang Luo"
     venue: "<b>ICLR</b> 2026 (<span style=\"color: red; font-weight: bold;\">Oral</span>): International Conference on Learning Representations. 2026."
     # underreview: "https://arxiv.org/"
-    paper_pdf: "https://openreview.net/pdf?id=cDc95lucVL"
+    paper_pdf: "https://arxiv.org/pdf/2603.13434"
     code: "https://github.com/JhuoW/MF-GIA"
     selected: y
 
