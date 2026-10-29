@@ -4,5 +4,6 @@
   "source": "https://github.com/JhuoW/PDF-Editor/tree/42a5a17c22fbc98e34d3d21dda9d37bed52165fc",
   "base": "/PDF-Editor/",
   "build": "npm ci; node _tools/build-pdf-editor.mjs <upstream-checkout>",
-  "packaging": "_tools/build-pdf-editor.mjs"
+  "packaging": "_tools/build-pdf-editor.mjs",
+  "packagingSha256": "0d1807aade989ded09b0bfcbdb649214c13be64e9437b9e1765e0fa6a2ec7349"
 }
