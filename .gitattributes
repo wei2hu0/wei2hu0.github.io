@@ -1,0 +1,2 @@
+# Preserve generated PDF-Editor assets byte-for-byte on every platform.
+PDF-Editor/** -text

@@ -1,0 +1,1 @@
+const s={inputBytes:268435456,pagePixels:4e7,totalPixels:5e8,dimension:16384,encodedBytes:125829120,outputBytes:134217728,pages:2e3},e={dpi:150,compression:"lossless",quality:90};export{e as D,s as V};
