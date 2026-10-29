@@ -1,21 +1,29 @@
 import { execFileSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import { cpSync, existsSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
-// Update this revision deliberately when publishing a new upstream version.
-const revision = '42a5a17c22fbc98e34d3d21dda9d37bed52165fc';
 const repository = 'https://github.com/JhuoW/PDF-Editor';
 const base = '/PDF-Editor/';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const destination = path.resolve(root, 'PDF-Editor');
 const source = process.argv[2] && path.resolve(process.argv[2]);
-if (!source || !existsSync(path.join(source, 'node_modules/vite/bin/vite.js'))) {
-  throw new Error('Usage: node _tools/build-pdf-editor.mjs <upstream-checkout> (run npm ci there first)');
+if (!source || process.argv.length > 4) {
+  throw new Error('Usage: node _tools/build-pdf-editor.mjs <upstream-checkout> [expected-revision] (run npm ci there first)');
+}
+// Automatic sync supplies the upstream SHA; manual rebuilds default to the
+// version already published in source.json rather than following a moving ref.
+const revision = process.argv[3] ?? JSON.parse(readFileSync(path.join(destination, 'source.json'), 'utf8')).revision;
+if (typeof revision !== 'string' || !/^[0-9a-f]{40}$/.test(revision)) {
+  throw new Error('Expected revision must be a complete 40-character lowercase Git commit SHA.');
 }
 const git = (...args) => execFileSync('git', ['-C', source, ...args], { encoding: 'utf8' }).trim();
 if (git('rev-parse', 'HEAD') !== revision || git('status', '--porcelain', '--untracked-files=no')) {
   throw new Error(`Use a clean upstream checkout at ${revision}.`);
+}
+if (!existsSync(path.join(source, 'node_modules/vite/bin/vite.js'))) {
+  throw new Error('Upstream dependencies are missing; run npm ci in the upstream checkout first.');
 }
 execFileSync(process.execPath, ['node_modules/typescript/bin/tsc', '-b'], { cwd: source, stdio: 'inherit' });
 const { build, loadConfigFromFile, mergeConfig } = await import(
@@ -69,5 +77,6 @@ writeFileSync(path.join(destination, 'source.json'), JSON.stringify({
   base,
   build: 'npm ci; node _tools/build-pdf-editor.mjs <upstream-checkout>',
   packaging: '_tools/build-pdf-editor.mjs',
+  packagingSha256: createHash('sha256').update(readFileSync(fileURLToPath(import.meta.url))).digest('hex'),
 }, null, 2) + '\n');
 console.log(`Packaged ${repository}@${revision} at ${destination}`);

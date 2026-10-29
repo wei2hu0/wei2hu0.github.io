@@ -1,2 +1,4 @@
 # Preserve generated PDF-Editor assets byte-for-byte on every platform.
 PDF-Editor/** -text
+_tools/*.mjs text eol=lf
+.github/workflows/*.yml text eol=lf

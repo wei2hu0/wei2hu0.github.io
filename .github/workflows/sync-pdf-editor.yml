@@ -1,0 +1,168 @@
+name: Sync PDF Editor
+
+on:
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/sync-pdf-editor.yml'
+      - '_tools/build-pdf-editor.mjs'
+      - '_tools/build-pdf-editor.test.mjs'
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: sync-pdf-editor
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    if: github.repository == 'wei2hu0/wei2hu0.github.io' && github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      UPSTREAM_REPOSITORY: https://github.com/JhuoW/PDF-Editor.git
+      EDITOR_URL: https://wei2hu0.github.io/PDF-Editor/
+    steps:
+      - name: Check out the latest homepage
+        uses: actions/checkout@v7
+        with:
+          ref: master
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+
+      - name: Test revision safeguards
+        run: node --test _tools/build-pdf-editor.test.mjs
+
+      - name: Check upstream master
+        id: upstream
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          set -euo pipefail
+          revision=$(git ls-remote "$UPSTREAM_REPOSITORY" refs/heads/master | cut -f1)
+          [[ "$revision" =~ ^[0-9a-f]{40}$ ]] || { echo 'Invalid upstream revision'; exit 1; }
+          deployed=$(node -p "JSON.parse(require('node:fs').readFileSync('PDF-Editor/source.json', 'utf8')).revision")
+          deployed_packager=$(node -p "JSON.parse(require('node:fs').readFileSync('PDF-Editor/source.json', 'utf8')).packagingSha256 || ''")
+          packager=$(sha256sum _tools/build-pdf-editor.mjs | cut -d' ' -f1)
+          echo "revision=$revision" >> "$GITHUB_OUTPUT"
+          echo "UPSTREAM_SHA=$revision" >> "$GITHUB_ENV"
+          echo "UPSTREAM_SOURCE=$RUNNER_TEMP/pdf-editor-source" >> "$GITHUB_ENV"
+          if [[ "$revision" != "$deployed" || "$packager" != "$deployed_packager" || "$EVENT_NAME" != schedule ]]; then
+            echo 'build=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'build=false' >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Fetch the exact upstream revision
+        if: steps.upstream.outputs.build == 'true'
+        run: |
+          set -euo pipefail
+          git init "$UPSTREAM_SOURCE"
+          git -C "$UPSTREAM_SOURCE" remote add origin "$UPSTREAM_REPOSITORY"
+          git -C "$UPSTREAM_SOURCE" fetch --depth=1 origin "$UPSTREAM_SHA"
+          git -C "$UPSTREAM_SOURCE" checkout --detach FETCH_HEAD
+
+      - name: Install locked dependencies and build the editor
+        if: steps.upstream.outputs.build == 'true'
+        run: |
+          set -euo pipefail
+          npm --prefix "$UPSTREAM_SOURCE" ci --no-audit --no-fund
+          node _tools/build-pdf-editor.mjs "$UPSTREAM_SOURCE" "$UPSTREAM_SHA"
+
+      - name: Verify scope and commit only PDF-Editor
+        if: steps.upstream.outputs.build == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          # Include tracked and untracked paths: never commit a homepage change.
+          outside=$(git status --porcelain --untracked-files=all -- . ':(exclude)PDF-Editor/**')
+          if [[ -n "$outside" ]]; then
+            echo 'Refusing to publish: files outside PDF-Editor/ changed.'
+            printf '%s\n' "$outside"
+            exit 1
+          fi
+          git add --all -- PDF-Editor/
+          if git diff --cached --quiet; then
+            echo 'The generated editor is unchanged.'
+            exit 0
+          fi
+          # Retry next run from any new homepage commit; never overwrite it.
+          git fetch origin master
+          if [[ "$(git rev-parse HEAD)" != "$(git rev-parse origin/master)" ]]; then
+            echo 'master changed during the build; the next run will retry safely.'
+            exit 1
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m "Sync PDF Editor from $UPSTREAM_SHA"
+          git -c credential.helper= -c 'credential.helper=!gh auth git-credential' push origin HEAD:master
+
+      - name: Check whether Pages needs publishing
+        id: pages
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          set -euo pipefail
+          # Recover even if a previous run pushed but its Pages request failed.
+          if curl --fail --silent --show-error --retry 2 \
+            "${EDITOR_URL}source.json?sync=${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" \
+            -o "$RUNNER_TEMP/live-pdf-editor-source.json" \
+            && cmp --silent PDF-Editor/source.json "$RUNNER_TEMP/live-pdf-editor-source.json" \
+            && [[ "$EVENT_NAME" == schedule ]]; then
+            echo 'publish=false' >> "$GITHUB_OUTPUT"
+            echo 'PDF Editor is already current.' >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo 'publish=true' >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Request the existing Jekyll Pages build
+        if: steps.pages.outputs.publish == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          # GITHUB_TOKEN pushes do not automatically trigger a Pages build.
+          # Request the existing branch build without changing its settings.
+          gh api "repos/$GITHUB_REPOSITORY/pages" > "$RUNNER_TEMP/pages-config.json"
+          node --input-type=module -e '
+            import { readFileSync } from "node:fs";
+            const site = JSON.parse(readFileSync(process.argv[1], "utf8"));
+            if (site.build_type !== "legacy" || site.source?.branch !== "master" || site.source?.path !== "/") {
+              throw new Error("Pages publishing settings changed; refusing to modify them automatically.");
+            }
+          ' "$RUNNER_TEMP/pages-config.json"
+          for attempt in 1 2 3; do
+            if gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"; then
+              exit 0
+            fi
+            if [[ "$attempt" == 3 ]]; then exit 1; fi
+            sleep 15
+          done
+
+      - name: Verify the published editor manifest
+        if: steps.pages.outputs.publish == 'true'
+        run: |
+          set -euo pipefail
+          for attempt in $(seq 1 40); do
+            if curl --fail --silent --show-error \
+              "${EDITOR_URL}source.json?sync=${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}-${attempt}" \
+              -o "$RUNNER_TEMP/live-pdf-editor-source.json" \
+              && cmp --silent PDF-Editor/source.json "$RUNNER_TEMP/live-pdf-editor-source.json"; then
+              echo "Published [PDF Editor]($EDITOR_URL) from upstream commit $UPSTREAM_SHA." >> "$GITHUB_STEP_SUMMARY"
+              exit 0
+            fi
+            sleep 15
+          done
+          echo 'Pages has not published the expected manifest. The next scheduled run will retry.'
+          exit 1
