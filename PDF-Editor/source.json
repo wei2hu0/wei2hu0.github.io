@@ -1,7 +1,7 @@
 {
   "repository": "https://github.com/JhuoW/PDF-Editor",
-  "revision": "02b27c100c03b611685564eacbeac5158da9d4ae",
-  "source": "https://github.com/JhuoW/PDF-Editor/tree/02b27c100c03b611685564eacbeac5158da9d4ae",
+  "revision": "1ccd83f5406a8244a2901c9f93016bac075464a2",
+  "source": "https://github.com/JhuoW/PDF-Editor/tree/1ccd83f5406a8244a2901c9f93016bac075464a2",
   "base": "/PDF-Editor/",
   "build": "npm ci; node _tools/build-pdf-editor.mjs <upstream-checkout>",
   "packaging": "_tools/build-pdf-editor.mjs",
