@@ -1,4 +1,14 @@
 projects:
+
+  - title: "InkStone 墨石"
+    subtitle: "Inkstone: A local Markdown editor for focused writing. | 墨石：专注写作的本地 Markdown 编辑器 "
+    thumbnail: "assets/projects/inkstone-promo-zh-1280x640@2x.png"
+    hompagethumbnail: "assets/projects/inkstone-promo-zh-1280x640@2x.png"
+    shortdescribe: "I developed <strong>inkstone 墨石</strong>, a local Markdown editor for focused writing. Try it:"
+    url: "/inkstone-website/zh.html"
+    selected: y
+
+
   - title: "PDF-Editor"
     subtitle: "A Free, Lightweight, Offline, and Open-Source PDF Editor | 免费，轻量化，开源的PDF编辑器 "
     thumbnail: "assets/projects/pdf-editor-full.png"
