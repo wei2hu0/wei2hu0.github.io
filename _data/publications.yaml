@@ -54,6 +54,13 @@ papers:
     code: "https://github.com/JhuoW/PE-GCL"
     selected: y
 
+  - title: "pFedAux: Personalizing Subgraph Federated Learning with Privacy-Preserving Projections"
+    authors: "<b>Wei Zhuo</b>, Zhaohuan Zhan, Han Yu, Shuaixian Wang"
+    venue: "<b>IEEE TNNLS</b>: IEEE Transactions on Neural Networks and Learning Systems."
+    paper_pdf: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10143747"
+    selected: y
+
+
   - title: "Graph Contrastive Learning with Adaptive Proximity-based Graph Augmentation"
     authors: "<b>Wei Zhuo</b>, Guang Tan"
     venue: "<b>IEEE TNNLS</b>: IEEE Transactions on Neural Networks and Learning Systems."
